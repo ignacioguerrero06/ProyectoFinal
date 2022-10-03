@@ -1,10 +1,30 @@
 {% extends "App/padre.html" %}
 {% load static %}
-{% block Titulo %} Pagina de Inicio {% endblock %}
-{% block Descripcion %} Bienvenido a la pagina {% endblock %}
+{% block Titulo %} Todos los Blogs {% endblock %}
+{% block Descripcion %} Aqui se pueden ver todos los posts hechos {% endblock %}
 
 {% block contenido_pag %}
-{{mensaje}}
+
+{% if blogs %}
+<ul>
+    {% for blog in blogs %}
+        <li>Nombre: {{equipo.nombre}}</li>
+        <li>Pais: {{equipo.pais}}</li>
+        <li>Año de Fundación: {{equipo.año_fundacion}}</li>
+        <li>Numero de Títulos: {{equipo.nro_titulos}}</li>
+        <br>
+    {% endfor %}
+</ul>
+
+{% else %}
+<p>No se encontraron Equipos.</p>
+
+{% endif %}
+
+
+
+
+
         <!-- Page content-->
         <div class="container">
             <div class="row">
@@ -25,7 +45,7 @@
                         <div class="col-lg-6">
                             <!-- Blog post-->
                             <div class="card mb-4">
-                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <a href="#!HAY QUE CREAR LA VISTA DE POST PARA PONER URL AQUI"><img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..." /></a>
                                 <div class="card-body">
                                     <div class="small text-muted">January 1, 2022</div>
                                     <h2 class="card-title h4">Post Title</h2>

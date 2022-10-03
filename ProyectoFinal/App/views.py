@@ -34,3 +34,9 @@ def crear_blog(request):
         formulario_user=BlogForm()
         return render (request, "App/crear_blog.html", {"formulario":formulario_user})
 
+
+
+def pages(request):
+    blogs=Blog.objects.all() 
+    return render(request, "App/pages.html", {'blogs':blogs})
+
