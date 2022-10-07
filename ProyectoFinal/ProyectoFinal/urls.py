@@ -23,10 +23,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('App/',include("App.urls")),
     path("", inicio, name="inicio"),
-    path("publicacion", publicacion , name="principal"),
-    path("busqueda_tema", busqueda , name="busqueda_tema"),
-
-
+    
 ]
 
 
