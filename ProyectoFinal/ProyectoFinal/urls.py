@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from App.views import inicio
+from App.views import *
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -23,6 +23,10 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('App/',include("App.urls")),
     path("", inicio, name="inicio"),
+    path("publicacion", publicacion , name="principal"),
+    path("busqueda_tema", busqueda , name="busqueda_tema"),
+
+
 ]
 
 

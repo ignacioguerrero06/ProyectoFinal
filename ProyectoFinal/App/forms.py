@@ -30,3 +30,4 @@ class ComentarioForm(forms.Form):
     cuerpo = forms.CharField(max_length=500)
     autor = forms.CharField(max_length=100)
     fecha_pub = forms.CharField(max_length=50)
+
